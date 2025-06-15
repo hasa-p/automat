@@ -1,10 +1,11 @@
 #!/bin/bash
 
+ENV_FILE="/root/nationstates/.env"
 LOG_FILE="/var/log/ns_keepalive.log"
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 
 # Load .env
-source /root/nationstates/.env || {
+source $ENV_FILE || {
   echo "[$TIMESTAMP] ERROR: Failed to load .env file" >> "$LOG_FILE"
   exit 1
 }
