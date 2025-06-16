@@ -1,0 +1,12 @@
+/var/log/ns_keepalive.log {
+    rotate 1
+    monthly
+    maxage 15
+    nocreate
+    missingok
+    notifempty
+    noolddir
+    nocompress
+    copytruncate
+}
+
